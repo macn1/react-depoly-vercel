@@ -1,0 +1,50 @@
+.hero{
+    display: flex;
+    height:80vh;
+    background-color: black;
+    background-image: url(../image/6676124.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0  0 2000px rgba(0,0,0,.5);
+}
+
+.content{
+    margin-top: 700px;
+    display: flex;
+    border: 1px red solid;
+    margin: 20PX;
+    flex-direction: row;
+    max-width: 120-px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+
+}
+
+.content h1{
+    font-size: 56px;
+    font-weight: bolder;
+}
+
+.content p {
+    font-size: 22px;
+    margin: 15px 0;
+    max-width: 550px;
+    letter-spacing: 2px;
+}
+.content{
+    color: inherit;
+    text-decoration: none;
+    /* background-color: purple; */
+    padding: 12px;
+}
+
+.content button{
+    /* margin-top: 800px; */
+    background-color: bisque;
+    box-shadow: none;
+    margin: 20PX;
+   height: 50px;
+   width: 100px;
+}
