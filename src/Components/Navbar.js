@@ -1,4 +1,5 @@
 import React from 'react'
+// import { Carousel } from 'react-responsive-carousel'
 // import logo from '../image/Screenshot 2023-10-22 201737.png'
 
 function Navbar() {
@@ -23,28 +24,30 @@ function Navbar() {
         
 	<ul className="nav navbar-nav">
 		<li>
-		<a href="#hero">Home</a>
+		<a href="/">Home</a>
 		</li>
 		<li>
 		<a href="#about">About</a>
 		</li>
-        <li>
-		<a href="#faq">Our Mission</a>
-		</li>
+       
 		<li>
 		<a href="#gallery">Gallery</a>
 		</li>
+		<li>
+		<a href="#faq">Our Mission</a>
+		</li>
 		
 		<li>
-		<a href="#fa">Contribute</a>
+		<a href="/payment">Contribute</a>
 		</li>
 		<li>
-		<a href="#contactarea">Contact</a>
+		<a href="/contact">Contact</a>
 		</li>
 	</ul>
 	</nav>
 </div>
 </header>
+{/* <Carousel/> */}
     </div>
   )
 }

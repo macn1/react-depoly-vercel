@@ -1,28 +1,34 @@
 
 import './App.css';
-import Navbar from './Components/Navbar';
-import Carousel from './Components/Carousel'
-import Section from './Components/Section';
-import Contact from './Components/Contact'
-import Footer from './Components/Footer';
-import Gallery from './Components/Gallery';
-import Mission from './Components/Mission';
-import Contribute from './Components/Contribute'
+import Home from './Components/Home';
+import Privacy from './Components/Privacy';
+import Refund from './Components/Refund';
+import Terms from './Components/Terms';
+import Payment from './Components/Payment';
+import Contact from  './Components/Contact'
 
+import {
+  BrowserRouter,
+  
+  Route,
+  Routes,
+} from "react-router-dom";
 function App() {
   return (
-    <>
-   
- <Navbar/>
- <Carousel/>
- <Section/>
+    <BrowserRouter>
+    <Routes>
 
- <Gallery/>
- <Mission/>
- <Contact/>
- <Contribute/>
- <Footer/>
-    </>
+
+      <Route exact path="/" element={<Home/>} />
+
+      <Route exact path="/privacy" element={<Privacy/>} />
+      <Route exact path="/refund" element={<Refund/>} />
+      <Route exact path="/terms" element={<Terms/>} />
+      <Route exact path="/payment" element={<Payment/>} />
+      <Route exact path="/contact" element={<Contact/>} />
+    
+    </Routes>
+  </BrowserRouter>
   );
 }
 
