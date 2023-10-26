@@ -1,6 +1,7 @@
 import React from 'react'
 // import { Carousel } from 'react-responsive-carousel'
 // import logo from '../image/Screenshot 2023-10-22 201737.png'
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -24,7 +25,8 @@ function Navbar() {
         
 	<ul className="nav navbar-nav">
 		<li>
-		<a href="/">Home</a>
+		{/* <a href="/">Home</a> */}
+		<Link to="/">Home</Link>
 		</li>
 		<li>
 		<a href="#about">About</a>
@@ -38,10 +40,12 @@ function Navbar() {
 		</li>
 		
 		<li>
-		<a href="/payment">Contribute</a>
+		
+		<Link to="/payment">Contribute</Link>
 		</li>
 		<li>
-		<a href="/contact">Contact</a>
+		<Link to="/contact">Contact</Link>
+		
 		</li>
 	</ul>
 	</nav>

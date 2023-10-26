@@ -26,7 +26,7 @@ function Gallery() {
                     <a href={img1} title="This is the description">
                         <img src={img1} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">This is <b>awesome</b></span> 
+                            <span class="caption">Education Support <b></b></span> 
                             <span class="camera"><i class="fa fa-camera"></i></span>
                             <div class="clearfix"></div>
                         </div>			
@@ -36,7 +36,7 @@ function Gallery() {
                     <a href={img2} title="This is the description">
                     <img src={img2} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">Great <b>marathon</b></span> 
+                            <span class="caption">Legal support<b></b></span> 
                             <span class="camera"><i class="fa fa-link"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -46,7 +46,7 @@ function Gallery() {
                     <a href={img3} title="This is the description">
                     <img src={img3} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">Running <b>miles</b></span> 
+                            <span class="caption">Food supply <b></b></span> 
                             <span class="camera"><i class="fa fa-heart"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -56,7 +56,7 @@ function Gallery() {
                     <a href={img4} title="This is the description">
                     <img src={img4} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">Young <b>volunteers</b></span> 
+                            <span class="caption">Medicine supply <b></b></span> 
                             <span class="camera"><i class="fa fa-tachometer"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -66,7 +66,7 @@ function Gallery() {
                     <a href={img5} title="This is the description">
                     <img src={img5} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">Charity <b>concerts</b></span> 
+                            <span class="caption">Charity <b></b></span> 
                             <span class="camera"><i class="fa fa-microphone"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -76,7 +76,7 @@ function Gallery() {
                     <a href={img6} title="This is the description">
                     <img src={img6} alt="" class="image-responsive"/>
                         <div class="description">
-                            <span class="caption">Generous <b>sponsors</b></span> 
+                            <span class="caption">sanjeevani <b></b></span> 
                             <span class="camera"><i class="fa fa-coffee"></i></span>
                             <div class="clearfix"></div>
                         </div>

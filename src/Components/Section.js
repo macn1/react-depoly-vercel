@@ -34,8 +34,7 @@ function Section() {
 				<div className="maintitle">
 					<h3 className="section-title"><strong>Welcome <span className="lighter"></span></strong> to sanathana dharma charitable trust</h3>
 					<p className="lead">
-						|Sanathanadharma is the eternal system of values and principles of life to be followed under varying circumstances of pleasures or pains, loses or gains, difficulties or comforts with a desire for the only desirable achievement in the higher worlds called salvation. In order to be established in such a dharma, it is necessary to develop a firm and consistent character that does not deviate from such principles of life under all circumstances. Sanathanadharma is not a man made law but has been bestowed on the mankind by the creator through rishis and sages. Many people from all sections of society who lived in this dharma on this sacred land are our torch bearers to worship and follow. Lord Sri Rama is worshiped as god because he lived in sanathanadharma and is considered to be embodiment of dharma
-“ Ramo Vigrahavan Dharmaha”
+						
 
 					</p>
 				</div>
@@ -43,17 +42,12 @@ function Section() {
 			<div className="col-md-4 col-sm-6">
 				<div className="service-box wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
 					<img src="http://themepush.com/demo/runcharity/assets/img/dummy.jpg" alt=""/>
-					<h3>August 7, 2015 <br/>Square Garden</h3>
+					<h3> About<br/>sanathana Dharmaa</h3>
 					<div className="text-left">
 						<p>
-							I will place all the necessary content for this event here, including where they can register, join, attend &amp; so on.
+						people  in India are facing an existential crisis, especially in Kerala. Keeping this in mind, a few well-meaning Hindu activists decided to take action to help the ailing all community. We launched an initiative to protect our people, traditions,and way of life. This movement, which aims to serve and protect all people
 						</p>
-						<p>
-							If not enough room, I will link to learn more, a new event page dedicated.
-						</p>
-						<p>
-							Yap. Really looking goody awesome!
-						</p>
+					
 						<p className="text-center">
 							<button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button>
 						</p>
@@ -63,41 +57,41 @@ function Section() {
 			<div className="col-md-4 col-sm-6">
 				<div className="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
 					<span className="glyphicon glyphicon-stats"></span>
-					<h3>1.386 Participants</h3>
+					<h3>87464</h3>
 					<p>
-						Nullam posuere, libero id interdum hendrerit, tortor nisl consectetur elit.
+						Persons fed
 					</p>
-					<button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button>
+					{/* <button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button> */}
 				</div>
 			</div>
 			<div className="col-md-4 col-sm-6">
 				<div className="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.2s">
 					<span className="glyphicon glyphicon-tree-deciduous"></span>
-					<h3>195 Concerts</h3>
+					<h3>8000</h3>
 					<p>
-						Nullam posuere, libero id interdum hendrerit, tortor nisl consectetur elit.
+						Hindus Helped
 					</p>
-					<button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button>
+					{/* <button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button> */}
 				</div>
 			</div>
 			<div className="col-md-4 col-sm-6">
 				<div className="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.3s">
 					<span className="glyphicon glyphicon-heart"></span>
-					<h3>268 Sponsors</h3>
+					<h3>6457</h3>
 					<p>
-						Nullam posuere, libero id interdum hendrerit, tortor nisl consectetur elit.
+					Patients helped
 					</p>
-					<button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button>
+					{/* <button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button> */}
 				</div>
 			</div>
 			<div className="col-md-4 col-sm-6">
 				<div className="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.4s">
 					<span className="glyphicon glyphicon-usd"></span>
-					<h3>$5.647 Donated</h3>
+					<h3>7452</h3>
 					<p>
-						Nullam posuere, libero id interdum hendrerit, tortor nisl consectetur elit.
+					Legal Help
 					</p>
-					<button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button>
+					{/* <button type="button" className="btn btn-info btn-md"><a href="/">Learn More</a></button> */}
 				</div>
 			</div>
 		</div>

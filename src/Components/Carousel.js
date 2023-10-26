@@ -3,11 +3,11 @@ import { Carousel } from 'react-responsive-carousel';
 import   { useState, useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Image1 from '../image/6676124.jpg'
-import Image2 from '../image/peakpx (1).jpg'
-import Image3 from '../image/peakpx.jpg'
+import Image1 from '../image/Black & Yellow Business Facebook Cover.jpg'
+import Image2 from '../image/Orange Digital Marketing Agency Facebook Cover.png'
+import Image3 from '../image/Navy Futuristic Business Facebook Cover.png'
 
-import './Carousel.css'
+// import './Carousel.css'
 
 function Back() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,17 +37,17 @@ function Back() {
     showStatus={false}
     showThumbs={false}
     onChange={handleSlideChange}>
-    <div className='hero'>
+    <div  style={{width:'100%',height:"100%"}}  >
       <img src={Image1} alt="" />
-      {/* <p className="legend"></p> */}
+    
     </div>
-    <div>
+    <div  style={{width:'100%',height:"100%"}} >
       <img src={Image2} alt="" />
-      {/* <p className="legend"></p> */}
+    
     </div>
-    <div>
+    <div  style={{width:'100%',height:"100PX"}}>
       <img src={Image3} alt="" />
-      {/* <p className="legend"></p> */}
+ 
     </div>
   </Carousel>
   )

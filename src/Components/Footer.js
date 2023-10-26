@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css'
+import { Link } from "react-router-dom";
 // import Privacy from './Privacy';
 // import {
 //   BrowserRouter,
@@ -13,9 +14,13 @@ const Footer = () => {
     <div className='footer'> 
     <footer >
       <div className="footer-links">
-        <a href="/privacy">Privacy</a>
-        <a href="/refund">Refund Policy</a>
-        <a href="/terms">Terms of Service</a>
+        
+        <Link to="/privacy">privcy</Link>
+        <br />
+        <Link to="/refund">refund policy</Link>
+        <br />
+        <Link to="/terms">Terms of Service</Link>
+      
       </div>
       <p>&copy; {new Date().getFullYear()} Sanathana  Dharma Trust</p>
     </footer>
