@@ -37,7 +37,7 @@ function Back() {
     showStatus={false}
     showThumbs={false}
     onChange={handleSlideChange}>
-    <div  style={{width:'100%',height:"100%"}}  >
+    <div  className='my-auto' style={{width:'100%',height:"100%", marginTop:"2ch"}}  >
       <img src={Image1} alt="" />
     
     </div>
