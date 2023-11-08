@@ -17,7 +17,8 @@ function Gallery() {
                     <div class="maintitle">
                         <h3 class="section-title">Events Gallery</h3>
                         <p class="lead wow flipInX">
-                            Have a look at your past events gallery, see how much fun we have while helping people all over the world. Join our community today!
+                        We Are A Hindu Humanitarian Organization Helping Children, Families, And Their Communities
+Overcome Poverty And Injustice
                         </p>
                     </div>
                 </div>

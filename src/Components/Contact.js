@@ -48,7 +48,7 @@ function Contact() {
 				<div className="maintitle">
 					<h3 className="section-title">Get in Touch</h3>
 					<p className="lead">
-						If you have questions about our events, don't hesitate to send us your message. This is a real working contact form, test it!
+						If you have questions about our events, don't hesitate to send us your message. 
 					</p>
 				</div>
 				<form id="contact" name="contact" method="post" className="text-left" onSubmit={handleSubmit}> 

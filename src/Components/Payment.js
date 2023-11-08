@@ -150,13 +150,21 @@
 
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+
+import img from  '../image/Ctribute TO US.png'
+import Footer from './Footer';
 // import useRazorpay from "react-razorpay";
 
 
 const PaymentComponent = () => {
   const [amount, setamount] = useState('');
 
-
+  const centerStyle = {
+    display: 'flex',
+    justifyContent: 'center', // Horizontal centering
+    alignItems: 'center',     // Vertical centering
+    // height: '100vh',         // Adjust to your needs
+  };
   const formStyle = {
     marginTop:'100px',
     width: '300px',
@@ -217,15 +225,24 @@ const PaymentComponent = () => {
       pay.open();
       
     }
+
   }
+  
 
 
   return (
-    <div>
+    <div  style={{marginTop:"80px"}} >
         <Navbar/>
-      <h2>Payment Component</h2>
-      <form  style={formStyle}>
         <div>
+        <img src={img} alt=""  style={{width:"100%"}}/>
+        </div>
+        <div style={{marginTop:"20px",marginBottom:"10px"}} >
+        <div style={centerStyle}>
+     <h2>Make Payment Here</h2>
+    </div>
+   
+      <form  style={formStyle} >
+        <div >
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -265,6 +282,8 @@ const PaymentComponent = () => {
           </button>
         </div>
       </form>
+      </div>
+      <Footer/>
     </div>
   );
 };

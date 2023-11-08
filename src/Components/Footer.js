@@ -10,19 +10,30 @@ import { Link } from "react-router-dom";
 // } from "react-router-dom";
 
 const Footer = () => {
+  const centerStyle = {
+    display: 'flex',
+    justifyContent: 'center', // Horizontal centering
+    alignItems: 'center',  
+    marginBottom:'10px'   // Vertical centering
+    // height: '100vh',         // Adjust to your needs
+  };
+  
   return (
     <div className='footer'> 
     <footer >
       <div className="footer-links">
         
-        <Link to="/privacy">privcy</Link>
+        <Link to="/privacy">Privacy Policy</Link>
         <br />
-        <Link to="/refund">refund policy</Link>
+        <Link to="/refund">Refund policy</Link>
         <br />
         <Link to="/terms">Terms of Service</Link>
       
       </div>
-      <p>&copy; {new Date().getFullYear()} Sanathana  Dharma Trust</p>
+      <div className='text' style={centerStyle}>
+      <p>&copy; {new Date().getFullYear()} Sanathana  Dharma Trust .All Rights Reserved</p>
+
+      </div>
     </footer>
     </div>
   );

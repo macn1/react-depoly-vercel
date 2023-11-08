@@ -29,6 +29,7 @@ function Back() {
       };
     }, [currentIndex]);
   return (
+    <div style={{marginTop:"90px"}}>
     <Carousel  autoPlay
     interval={5000} // Time in milliseconds for auto-play (5 seconds)
     infiniteLoop
@@ -37,7 +38,7 @@ function Back() {
     showStatus={false}
     showThumbs={false}
     onChange={handleSlideChange}>
-    <div  className='my-auto' style={{width:'100%',height:"100%", marginTop:"2ch"}}  >
+    <div  className='my-auto' style={{width:'100%',height:"100%"}}  >
       <img src={Image1} alt="" />
     
     </div>
@@ -50,6 +51,7 @@ function Back() {
  
     </div>
   </Carousel>
+  </div>
   )
 }
 

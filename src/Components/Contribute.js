@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>
+    <div> 
       <section id="contactarea" className="parallax section" >
 <div className="wrapsection">
 	<div className="parallax-overlay" style={{backgroundColor: '#FF5733'}}></div>

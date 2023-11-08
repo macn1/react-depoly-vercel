@@ -1,7 +1,16 @@
 .footer {
     background-color: black;
+    /* display: flex; */
+    align-items:flex-end;
+    /* flex-direction:row; */
     color: white;
     padding: 20px;
+    /* height: fit-content; */
    
   }
- 
+ .text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 1px;  */
+}

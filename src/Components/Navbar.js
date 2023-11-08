@@ -29,6 +29,8 @@ function Navbar() {
 		<Link to="/">Home</Link>
 		</li>
 		<li>
+		{/* <Link to="/mission">About</Link> */}
+			
 		<a href="#about">About</a>
 		</li>
        
