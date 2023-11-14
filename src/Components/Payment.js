@@ -50,11 +50,11 @@
 
 //   rzp1.open();
 // };
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     amount: '',
-//     phoneNumber: '',
-//   });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   amount: '',
+  //   phoneNumber: '',
+  // });
 
 //   const handleInputChange = (e) => {
 //     const { name, value } = e.target;
@@ -149,6 +149,7 @@
 // export default PaymentComponent;
 
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'
 import Navbar from './Navbar';
 
 import img from  '../image/Ctribute TO US.png'
@@ -157,6 +158,11 @@ import Footer from './Footer';
 
 
 const PaymentComponent = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    amount: '',
+    phoneNumber: '',
+  });
   const [amount, setamount] = useState('');
 
   const centerStyle = {
@@ -167,7 +173,7 @@ const PaymentComponent = () => {
   };
   const formStyle = {
     marginTop:'100px',
-    width: '300px',
+    width: '500px',
     margin: '0 auto',
     padding: '20px',
     border: '1px solid #ccc',
@@ -228,6 +234,31 @@ const PaymentComponent = () => {
 
   }
   
+  
+
+
+  const sendEmail = () => {
+    console.log("hello");
+    emailjs.send(
+      'service_k5yjwfu',//service id
+      'template_rz09vqg', //template id
+      {
+        to_name: 'pranavpranab@gmail.com',
+        message: 'This is the body of the email',
+      },
+      'EZ0yThSzlhuStys_f' //user id
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+    })
+    .catch((error) => {
+      console.error('Failed to send email:', error);
+    });
+  };
+  
+  // In your component, use sendEmail as the onClick handler for your button
+  
+  
 
 
   return (
@@ -241,7 +272,7 @@ const PaymentComponent = () => {
      <h2>Make Payment Here</h2>
     </div>
    
-      <form  style={formStyle} >
+      <form onSubmit={handleSubmit}  style={formStyle} >
         <div >
           <label htmlFor="name">Name:</label>
           <input
@@ -275,13 +306,18 @@ const PaymentComponent = () => {
             style={inputStyle}
             required
           />
+          <div className="row"><p className="col-12">Please provide any ONE of the following ID options.</p> <div className="col-6 col-lg-3"><select name="id_type" id="id_type" required="required" className="form-control"><option value="1_pan" selected="selected">PAN</option> <option value="2_aadhaar">Aadhaar</option> <option value="4_passport">Passport</option> <option value="5_elector_id">Elector ID</option> <option value="6_dl">Driving License</option></select></div> <div className="col-6 col-lg-9"><input type="text" name="id_number" id="id_number" placeholder="ID Number*" required="required" className="form-control" /></div></div>
         </div>
+        <input type="checkbox"  checked="checked" />
+        <label htmlFor="">   I am happy to cover processing fee for sanatha dharma trust</label>
         <div>
-          <button   style={buttonStyle} onClick={handleSubmit} >
+          <button   style={buttonStyle}  >
             Make Payment
           </button>
+         
         </div>
       </form>
+      <button onClick={sendEmail}>send email</button>
       </div>
       <Footer/>
     </div>

@@ -35,7 +35,7 @@ function Navbar() {
 		</li>
        
 		<li>
-		<a href="#gallery">Gallery</a>
+		<Link to ="/gallery">Gallery</Link>
 		</li>
 		<li>
 		<a href="#faq">Our Mission</a>

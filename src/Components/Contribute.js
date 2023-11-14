@@ -48,7 +48,8 @@ function Contact() {
 				<div id="error">			
 					<p className="contactalert">
 						 Something went wrong, try refreshing and submitting the form again.
-					</p>			
+					</p>	
+							
 				</div>
 			</div>
 		</div>

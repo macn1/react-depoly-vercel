@@ -13,6 +13,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Gallery from './Components/Gallery';
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
       <Route exact path="/privacy" element={<Privacy/>} />
       <Route exact path="/refund" element={<Refund/>} />
       <Route exact path="/terms" element={<Terms/>} />
+      <Route exact path="/gallery" element={<Gallery/>} />
       <Route exact path="/payment" element={<Payment/>} />
       <Route exact path="/contact" element={<Contact/>} />
     
