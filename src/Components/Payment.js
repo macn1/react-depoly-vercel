@@ -1,159 +1,16 @@
-// import React, { useState } from 'react';
-// import Navbar from './Navbar';
-// import useRazorpay from "react-razorpay";
 
-
-// const PaymentComponent = () => {
-//     const [Razorpay] = useRazorpay();
-
-// const handlePayment = async (params) => {
-//     console.log('pranav');
-// //   const order = await createOrder(params); //  Create order on your backend
-
-//   const options = {
-//     key: "rzp_test_AzPqrmW4ZbTrrW", // Enter the Key ID generated from the Dashboard
-//     amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-//     currency: "INR",
-//     name: "Acme Corp",
-//     description: "Test Transaction",
-   
-//     order_id: "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
-//     handler: function (response) {
-//       alert(response.razorpay_payment_id);
-//       alert(response.razorpay_order_id);
-//       alert(response.razorpay_signature);
-//     },
-//     prefill: {
-//       name: "Piyush Garg",
-//       email: "youremail@example.com",
-//       contact: "9999999999",
-//     },
-//     notes: {
-//       address: "Razorpay Corporate Office",
-//     },
-//     theme: {
-//       color: "#3399cc",
-//     },
-//   };
-
-//   const rzp1 = new Razorpay(options);
-
-//   rzp1.on("payment.failed", function (response) {
-//     alert(response.error.code);
-//     alert(response.error.description);
-//     alert(response.error.source);
-//     alert(response.error.step);
-//     alert(response.error.reason);
-//     alert(response.error.metadata.order_id);
-//     alert(response.error.metadata.payment_id);
-//   });
-
-//   rzp1.open();
-// };
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   amount: '',
-  //   phoneNumber: '',
-  // });
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handlePaymentSubmit = (e) => {
-//     e.preventDefault();
-//     // You can handle form submission here, e.g., send data to a server, process payment, etc.
-//     console.log('Form submitted with data:', formData);
-//   };
-
-//   const formStyle = {
-//     marginTop:'100px',
-//     width: '300px',
-//     margin: '0 auto',
-//     padding: '20px',
-//     border: '1px solid #ccc',
-//     borderRadius: '5px',
-//     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-//   };
-
-//   const inputStyle = {
-//     width: '100%',
-//     padding: '10px',
-//     margin: '10px 0',
-//     borderRadius: '5px',
-//     border: '1px solid #ccc',
-//   };
-
-//   const buttonStyle = {
-//     backgroundColor: '#007bff',
-//     color: 'white',
-//     border: 'none',
-//     padding: '10px 20px',
-//     borderRadius: '5px',
-//     cursor: 'pointer',
-//   };
-
-
-//   return (
-//     <div>
-//         <Navbar/>
-//       <h2>Payment Component</h2>
-//       <form  style={formStyle}>
-//         <div>
-//           <label htmlFor="name">Name:</label>
-//           <input
-//             type="text"
-//             id="name"
-//             name="name"
-//             value={formData.name}
-//             onChange={handleInputChange}
-//             style={inputStyle}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <label htmlFor="amount">Amount:</label>
-//           <input
-//             type="number"
-//             id="amount"
-//             name="amount"
-//             value={formData.amount}
-//             onChange={handleInputChange}
-//             style={inputStyle}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <label htmlFor="phoneNumber">Phone Number:</label>
-//           <input
-//             type="tel"
-//             id="phoneNumber"
-//             name="phoneNumber"
-//             value={formData.phoneNumber}
-//             onChange={handleInputChange}
-//             style={inputStyle}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <button  onClick={handlePayment} style={buttonStyle} >
-//             Make Payment
-//           </button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default PaymentComponent;
-
+//re_B1E41hQ1_42pQXt2tRaYCFMvFhYLsmPhP
 import React, { useState } from 'react';
+import { Resend } from 'resend';
 import emailjs from 'emailjs-com'
+
 import Navbar from './Navbar';
 
 import img from  '../image/Ctribute TO US.png'
 import Footer from './Footer';
+
+
+const resend = new Resend("re_B1E41hQ1_42pQXt2tRaYCFMvFhYLsmPhP");
 // import useRazorpay from "react-razorpay";
 
 
@@ -161,8 +18,22 @@ const PaymentComponent = () => {
   const [formData, setFormData] = useState({
     name: '',
     amount: '',
+    email:'',
     phoneNumber: '',
   });
+  console.log(formData);
+  
+const setData =(data,state)=>{
+  let pokker = formData
+  pokker[state] =data
+  setFormData(pokker)
+  console.log(formData.amount);
+  
+  
+  }
+  //2da30d9a-309b-4df6-8681-9fbbeb96bf1b
+  
+
   const [amount, setamount] = useState('');
 
   const centerStyle = {
@@ -200,13 +71,13 @@ const PaymentComponent = () => {
   
   const handleSubmit = (e)=>{
     e.preventDefault();
-    if(amount === ""){
+    if(formData.amount === ""){
     alert("please enter amount");
     }else{
       var options = {
         key: "rzp_test_AzPqrmW4ZbTrrW",
         key_secret:"0ShOJCHOtk67gLkk4LM3VK9D",
-        amount: amount *100,
+        amount: formData.amount *100,
         currency:"INR",
         name:"sanathan dharma trust",
         description:"for testing purpose",
@@ -237,24 +108,22 @@ const PaymentComponent = () => {
   
 
 
-  const sendEmail = () => {
-    console.log("hello");
-    emailjs.send(
-      'service_k5yjwfu',//service id
-      'template_rz09vqg', //template id
-      {
-        to_name: 'pranavpranab@gmail.com',
-        message: 'This is the body of the email',
-      },
-      'EZ0yThSzlhuStys_f' //user id
-    )
-    .then((response) => {
-      console.log('Email sent successfully:', response);
-    })
-    .catch((error) => {
-      console.error('Failed to send email:', error);
-    });
-  };
+  const sendEmail =  (event) => {
+    event.preventDefault()
+    const config ={
+      secureToken :"2da30d9a-309b-4df6-8681-9fbbeb96bf1b",  
+      To : 'athulraihan28@gmail.com',
+      From : "athulraihan27@gmail.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+    }
+    console.log((window.Email));
+    if(window.Email){
+      window.Email.send(config).then(()=>{alert("email sent successfully")})
+    }
+      
+    }
+
   
   // In your component, use sendEmail as the onClick handler for your button
   
@@ -282,6 +151,9 @@ const PaymentComponent = () => {
           
             style={inputStyle}
             required
+            onChange={(e)=>{
+              setData(e.target.value,"name")
+            }}
           />
         </div>
         <div>
@@ -293,7 +165,25 @@ const PaymentComponent = () => {
             
             style={inputStyle}
             required
-            value={amount}onChange={(e)=>setamount(e.target.value)}
+            // value={amount} 
+            onChange={(e)=>{
+              setData(e.target.value,"amount")
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="Email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            
+            style={inputStyle}
+            required
+            // value={amount} 
+            onChange={(e)=>{
+              setData(e.target.value,"email")
+            }}
           />
         </div>
         <div>
@@ -305,13 +195,17 @@ const PaymentComponent = () => {
           
             style={inputStyle}
             required
+            onChange={(e)=>{
+              setData(e.target.value,"phoneNumber")
+            }}
           />
+          
           <div className="row"><p className="col-12">Please provide any ONE of the following ID options.</p> <div className="col-6 col-lg-3"><select name="id_type" id="id_type" required="required" className="form-control"><option value="1_pan" selected="selected">PAN</option> <option value="2_aadhaar">Aadhaar</option> <option value="4_passport">Passport</option> <option value="5_elector_id">Elector ID</option> <option value="6_dl">Driving License</option></select></div> <div className="col-6 col-lg-9"><input type="text" name="id_number" id="id_number" placeholder="ID Number*" required="required" className="form-control" /></div></div>
         </div>
         <input type="checkbox"  checked="checked" />
         <label htmlFor="">   I am happy to cover processing fee for sanatha dharma trust</label>
         <div>
-          <button   style={buttonStyle}  >
+          <button   style={buttonStyle}   >
             Make Payment
           </button>
          
@@ -327,4 +221,4 @@ const PaymentComponent = () => {
 export default PaymentComponent;
 
 
-
+ 

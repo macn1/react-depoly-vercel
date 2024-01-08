@@ -46,7 +46,7 @@ function Navbar() {
 		<Link to="/payment">Contribute</Link>
 		</li>
 		<li>
-		<Link to="/contact">Contact</Link>
+		<Link to="/contact">Contact Us</Link>
 		
 		</li>
 	</ul>

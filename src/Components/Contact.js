@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-// import Footer from './Footer';
+import Footer from './Footer';
 
 function Contact() {
 	const navigate = useNavigate();
@@ -46,10 +46,26 @@ function Contact() {
 		<div className="row">
 			<div className="col-md-12">
 				<div className="maintitle">
-					<h3 className="section-title">Get in Touch</h3>
+					<h3 className="section-title">Contact Us</h3>
+					
 					<p className="lead">
-						If you have questions about our events, don't hesitate to send us your message. 
+						Email:Sanathanadharmatrust@outlook.com
+						
+					
 					</p>
+					<p className="lead">
+						Phone:9400161516
+						
+					
+					</p>
+					Address:
+					<p>SANATHANA DHARMA TRUSTT <br />
+Door No.66/4887 <br />
+(Old No.XL/6517)
+R V Complex
+T D Road
+Kacheripady
+Ernakulam - 682035</p>	
 				</div>
 				<form id="contact" name="contact" method="post" className="text-left" onSubmit={handleSubmit}> 
 					<fieldset>

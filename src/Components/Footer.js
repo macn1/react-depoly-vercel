@@ -28,6 +28,9 @@ const Footer = () => {
         <Link to="/refund">Refund policy</Link>
         <br />
         <Link to="/terms">Terms of Service</Link>
+        <br />
+        <Link to="/contact">Contact Us</Link>
+        
       
       </div>
       <div className='text' style={centerStyle}>

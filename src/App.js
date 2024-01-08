@@ -7,6 +7,7 @@ import Terms from './Components/Terms';
 import Payment from './Components/Payment';
 import Contact from  './Components/Contact'
 
+
 import {
   BrowserRouter,
   
@@ -28,7 +29,7 @@ function App() {
       <Route exact path="/gallery" element={<Gallery/>} />
       <Route exact path="/payment" element={<Payment/>} />
       <Route exact path="/contact" element={<Contact/>} />
-    
+      
     </Routes>
   </BrowserRouter>
   );

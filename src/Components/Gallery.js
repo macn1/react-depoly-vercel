@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar';
 import img1 from '../gallery/educational.jpg'
 import img2 from '../gallery/legal.jpg'
 import img3 from '../gallery/food.jpg'
@@ -8,7 +9,10 @@ import img6 from '../gallery/mangalyaneethi.jpg'
 
 function Gallery() {
   return (
-    <div><section id="gallery" class="parallax section" style={{backgroundImage:`url`}}>
+    
+    <div>
+        <Navbar/>
+        <section id="gallery" class="parallax section" style={{backgroundImage:`url`}}>
     <div class="wrapsection">
         <div class="parallax-overlay" style={{backgroundColor: 'yellowgreen'}}></div>
         <div class="container">
