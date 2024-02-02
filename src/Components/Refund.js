@@ -64,6 +64,10 @@ If donation was made online, please provide Donation-ID.</li>
 
 </ul>
 
+<li>
+  After all this process the AMOUNT will refunded in (5-7) working days
+</li>
+
 
 
 </p>
