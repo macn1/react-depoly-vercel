@@ -4,6 +4,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 function Navbar() {
+	
   return (
     <div>
         < header id="header" className="navbar navbar-inverse navbar-fixed-top" role="banner">

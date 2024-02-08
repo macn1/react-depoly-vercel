@@ -6,7 +6,7 @@ import Refund from './Components/Refund';
 import Terms from './Components/Terms';
 import Payment from './Components/Payment';
 import Contact from  './Components/Contact'
-
+import Form_email_send from './Components/form_mail_send';
 
 import {
   BrowserRouter,
@@ -22,6 +22,8 @@ function App() {
 
 
       <Route exact path="/" element={<Home/>} />
+      <Route exact path="/dev" element={<Form_email_send/>} />
+
 
       <Route exact path="/privacy" element={<Privacy/>} />
       <Route exact path="/refund" element={<Refund/>} />

@@ -1,43 +1,67 @@
+import { useState } from "react"
 
-//re_B1E41hQ1_42pQXt2tRaYCFMvFhYLsmPhP
-import React, { useState } from 'react';
-import { Resend } from 'resend';
-import emailjs from 'emailjs-com'
+function Form_email_send(){
+const [amount,setAmount] = useState(0)
+const [email,setEmail] = useState('')
+const [name,setName] = useState('')
+const [no, setNo] = useState('')
+async function sendEmail(){
+    const json_send_email = {
+        name,
+        amount,
+        email,
+        no
+    }
+    console.log(json_send_email);
 
-import Navbar from './Navbar';
-
-import img from  '../image/Ctribute TO US.png'
-import Footer from './Footer';
 
 
-// const resend = new Resend("re_B1E41hQ1_42pQXt2tRaYCFMvFhYLsmPhP");
-// import useRazorpay from "react-razorpay";
+    try {
+    const response = await fetch('http://127.0.0.1:8000/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+            'Accept':'application/json'
+          // Add any additional headers here if needed
+        },
+        body: JSON.stringify(json_send_email), // Replace with your actual data
+      });
+      console.log('here',response);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-
-const PaymentComponent = () => {
-  console.log(process.env.REACT_APP_APi_key,'aaaaaaaa');
-  const [formData, setFormData] = useState({
-    name: '',
-    amount: '',
-    email:'',
-    phoneNumber: '',
-  });
-  console.log(formData);
+      const jsonData = await response.json();
+      
+    } catch (error) {
+      console.log('err');
+    }
   
-const setData =(data,state)=>{
-  let pokker = formData
-  pokker[state] =data
-  setFormData(pokker)
-  console.log(formData.amount);
-  
-  
-  }
-  //2da30d9a-309b-4df6-8681-9fbbeb96bf1b
-  
 
-  const [amount, setamount] = useState('');
 
-  const centerStyle = {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+const centerStyle = {
     display: 'flex',
     justifyContent: 'center', // Horizontal centering
     alignItems: 'center',     // Vertical centering
@@ -69,80 +93,18 @@ const setData =(data,state)=>{
     borderRadius: '5px',
     cursor: 'pointer',
   };
-  
-  const handleSubmit = (e)=>{
-    e.preventDefault();
-    if(formData.amount === ""){
-    alert("please enter amount");
-    }else{
-      var options = {
-        key: process.env.REACT_APP_APi_key,
-        key_secret:process.env.REACT_APP_Secret_key,
-        amount: formData.amount *100,
-        currency:"INR",
-        name:"sanathan dharma trust",
-        description:"for testing purpose",
-        handler: function(response){
-          console.log(response);
-          alert(response.razorpay_payment_id);
-          // alert(response);
-        },
-        prefill: {
-          name:"",
-          email:"mvel1620r@gmail.com",
-          contact:"9538822342"
-        },
-        notes:{
-          address:"Razorpay Corporate office"
-        },
-        theme: {
-          color:"#3399cc"
-        }
-      };
-      var pay = new window.Razorpay(options);
-      pay.open();
-      
-    }
-
-  }
-  
-  
-
-
-  const sendEmail =  (event) => {
-    event.preventDefault()
-    const config ={
-      secureToken :"2da30d9a-309b-4df6-8681-9fbbeb96bf1b",  
-      To : 'athulraihan28@gmail.com',
-      From : "athulraihan27@gmail.com",
-      Subject : "This is the subject",
-      Body : "And this is the body"
-    }
-    console.log((window.Email));
-    if(window.Email){
-      window.Email.send(config).then(()=>{alert("email sent successfully")})
-    }
-      
-    }
-
-  
-  // In your component, use sendEmail as the onClick handler for your button
-  
-  
-
-
-  return (
-    <div  style={{marginTop:"80px"}} >
-        <Navbar/>
+    return (
+        <div  style={{marginTop:"80px"}} >
+        
         <div>
-        <img src={img} alt=""  style={{width:"100%"}}/>
+        
         </div>
         <div style={{marginTop:"20px",marginBottom:"10px"}} >
         <div style={centerStyle}>
      <h2>Make Payment Here</h2>
     </div>
    
-      <form onSubmit={handleSubmit}  style={formStyle} >
+      <form   style={formStyle} >
         <div >
           <label htmlFor="name">Name:</label>
           <input
@@ -153,7 +115,7 @@ const setData =(data,state)=>{
             style={inputStyle}
             required
             onChange={(e)=>{
-              setData(e.target.value,"name")
+              setName(e.target.value)
             }}
           />
         </div>
@@ -168,7 +130,7 @@ const setData =(data,state)=>{
             required
             // value={amount} 
             onChange={(e)=>{
-              setData(e.target.value,"amount")
+              setAmount(e.target.value)
             }}
           />
         </div>
@@ -183,7 +145,7 @@ const setData =(data,state)=>{
             required
             // value={amount} 
             onChange={(e)=>{
-              setData(e.target.value,"email")
+              setEmail(e.target.value)
             }}
           />
         </div>
@@ -197,7 +159,7 @@ const setData =(data,state)=>{
             style={inputStyle}
             required
             onChange={(e)=>{
-              setData(e.target.value,"phoneNumber")
+              setNo(e.target.value)
             }}
           />
           
@@ -214,12 +176,10 @@ const setData =(data,state)=>{
       </form>
       <button onClick={sendEmail}>send email</button>
       </div>
-      <Footer/>
+     
     </div>
   );
-};
+    
+}
 
-export default PaymentComponent;
-
-
- 
+export default Form_email_send
