@@ -15,7 +15,7 @@ import Footer from './Footer';
 
 
 const PaymentComponent = () => {
-  // console.log("FUCK OFF");
+  
   console.log(process.env.REACT_APP_APi_key,'aaaaaaaa');
   console.log(process.env.REACT_APP_Secret_key,'aaaa');
   const [formData, setFormData] = useState({
@@ -73,16 +73,16 @@ const setData =(data,state)=>{
   };
   
   const handleSubmit = (e)=>{
+
     e.preventDefault();
     if(formData.amount === ""){
     alert("please enter amount");
     }else{
 
-      console.log(process.env.REACT_APP_APi_key,"WDWD");
-      console.log(process.env.REACT_APP_Secret_key)
+   
       var options = {
-        key: process.env.REACT_APP_APi_key,
-        key_secret:process.env.REACT_APP_Secret_key,
+        key: 'rzp_live_RkUAyYgik5Py',
+        key_secret:'q4fUUAfQhd8KdOwv0',
         amount: formData.amount *100,
         currency:"INR",
         name:"sanathan dharma trust",
@@ -93,9 +93,9 @@ const setData =(data,state)=>{
           // alert(response);
         },
         prefill: {
-          name:"",
-          email:"mvel1620r@gmail.com",
-          contact:"9538822342"
+          name:formData.name,
+          email:formData.email,
+          contact:formData.phoneNumber
         },
         notes:{
           address:"Razorpay Corporate office"
