@@ -81,8 +81,8 @@ const setData =(data,state)=>{
 
    
       var options = {
-        key: 'rzp_live_RkUAyYgik5Py',
-        key_secret:'q4fUUAfQhd8KdOwv0',
+        key: process.env.REACT_APP_APi_key,
+        key_secret:process.env.REACT_APP_Secret_key,
         amount: formData.amount *100,
         currency:"INR",
         name:"sanathan dharma trust",
