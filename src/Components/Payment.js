@@ -15,6 +15,7 @@ import Footer from './Footer';
 
 
 const PaymentComponent = () => {
+  console.log("FUCK OFF");
   console.log(process.env.REACT_APP_APi_key,'aaaaaaaa');
   const [formData, setFormData] = useState({
     name: '',
@@ -75,6 +76,8 @@ const setData =(data,state)=>{
     if(formData.amount === ""){
     alert("please enter amount");
     }else{
+
+      console.log(process.env.REACT_APP_APi_key,"WDWD");
       var options = {
         key: process.env.REACT_APP_APi_key,
         key_secret:process.env.REACT_APP_Secret_key,

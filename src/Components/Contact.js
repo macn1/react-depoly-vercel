@@ -8,6 +8,7 @@ function Contact() {
 	const navigate = useNavigate();
 	const [data,setData]= useState({name:'',email:'',message:''})
 	console.log(data);
+	console.log("DATA ");
 
 	const handleChange =(e)=>{
 		setData({...data,[e.target.name]:e.target.value})

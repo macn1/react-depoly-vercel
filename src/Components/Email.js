@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { useEffect } from 'react';
 
 const resend = new Resend('re_5nzCNvTS_5Z2wtALNX5snRUxnPSUqQPXC');
 // export default async function POST(){
